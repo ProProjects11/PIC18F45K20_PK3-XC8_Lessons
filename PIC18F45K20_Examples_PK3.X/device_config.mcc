@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration device="PIC18F45K20" mcc_version="v2.0">
+    <managers>
+        <manager generated="true" name="Pin Manager" reloadPin="manual">
+            <setting name="package" option="PDIP40"/>
+            <setting name="sorting" option="true"/>
+            <resource customName="P1D" digital="true" direction="OUTPUT" function="P1D" module="ECCP1" name="RD7" start="false" type="pin" wpu="false"/>
+            <file checksum="1223003972" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="845402121" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+        </manager>
+        <manager generated="true" name="System" reloadPin="manual">
+            <initializer comment="" name="Initialize">
+                <setting name="SCS" option="FOSC"/>
+                <setting name="IDLEN" option="disabled"/>
+                <setting name="IRCF" option="1MHz_HFINTOSC/16"/>
+                <setting name="INTSRC" option="disabled"/>
+                <setting name="PLLEN" option="disabled"/>
+                <setting name="TUN" option="0x00"/>
+                <additionalSetting name="pllMultiplier" option=""/>
+                <additionalSetting name="extclk" option="1.0 MHz"/>
+            </initializer>
+            <setting name="IESO" option="ON"/>
+            <setting name="FOSC" option="INTIO67"/>
+            <setting name="FCMEN" option="ON"/>
+            <setting name="PWRT" option="OFF"/>
+            <setting name="BOREN" option="SBORDIS"/>
+            <setting name="BORV" option="18"/>
+            <setting name="WDTPS" option="32768"/>
+            <setting name="WDTEN" option="OFF"/>
+            <setting name="CCP2MX" option="PORTC"/>
+            <setting name="HFOFST" option="ON"/>
+            <setting name="PBADEN" option="ON"/>
+            <setting name="LPT1OSC" option="ON"/>
+            <setting name="MCLRE" option="ON"/>
+            <setting name="LVP" option="OFF"/>
+            <setting name="STVREN" option="ON"/>
+            <setting name="XINST" option="OFF"/>
+            <setting name="DEBUG" option="OFF"/>
+            <setting name="CP2" option="OFF"/>
+            <setting name="CP1" option="OFF"/>
+            <setting name="CP3" option="OFF"/>
+            <setting name="CP0" option="OFF"/>
+            <setting name="CPB" option="OFF"/>
+            <setting name="CPD" option="OFF"/>
+            <setting name="WRT0" option="OFF"/>
+            <setting name="WRT1" option="OFF"/>
+            <setting name="WRT2" option="OFF"/>
+            <setting name="WRT3" option="OFF"/>
+            <setting name="WRTC" option="OFF"/>
+            <setting name="WRTD" option="OFF"/>
+            <setting name="WRTB" option="OFF"/>
+            <setting name="EBTR3" option="OFF"/>
+            <setting name="EBTR1" option="OFF"/>
+            <setting name="EBTR2" option="OFF"/>
+            <setting name="EBTR0" option="OFF"/>
+            <setting name="EBTRB" option="OFF"/>
+            <setting name="generateConfigBits" option="false"/>
+            <file checksum="1010479077" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="1778776685" modified="false" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+        </manager>
+    </managers>
+    <modules>
+        <module generated="true" mode="Timer" name="TMR2" order="0" reloadPin="manual" type="tmr_timer2">
+            <initializer comment="" name="Initialize">
+                <setting name="TMR2ON" option="off"/>
+                <setting name="T2CKPS" option="1:16"/>
+                <setting name="T2OUTPS" option="1:1"/>
+                <setting name="PR2" option="250"/>
+                <setting name="TMR2" option="0x0"/>
+                <additionalSetting name="T2CKPS" option="1:16"/>
+                <additionalSetting name="timerstart" option="disabled"/>
+                <additionalSetting name="maxPeriodChanged" option="1.02 ms"/>
+                <additionalSetting name="minPeriodChanged" option="0.0 ns"/>
+                <additionalSetting name="period" option="16.0 ms"/>
+            </initializer>
+            <setting name="TMRI" option="false"/>
+            <setting name="ticker" option="0"/>
+            <file checksum="2977258086" modified="false" name="tmr2.c" path="mcc_generated_files/tmr2.c"/>
+            <file checksum="1080538234" modified="false" name="tmr2.h" path="mcc_generated_files/tmr2.h"/>
+        </module>
+        <module generated="true" mode="Enhanced PWM" name="ECCP1" order="1" reloadPin="manual" type="eccp">
+            <initializer comment="" name="Initialize">
+                <setting name="P1M" option="single"/>
+                <setting name="CCP1M" option="P1AP1Chi_P1BP1Dhi"/>
+                <setting name="DC1B" option="16"/>
+                <setting name="ECCPAS" option="disabled"/>
+                <setting name="PSSAC" option="P1AP1C_0"/>
+                <setting name="ECCPASE" option="operating"/>
+                <setting name="PSSBD" option="P1BP1D_0"/>
+                <setting name="PRSEN" option="automatic_restart"/>
+                <setting name="PDC" option="0"/>
+                <setting name="STRA" option="P1A_to_port"/>
+                <setting name="STRB" option="P1B_to_port"/>
+                <setting name="STRC" option="P1C_to_port"/>
+                <setting name="STRD" option="P1D_to_CCP1M"/>
+                <setting name="STRSYNC" option="start_at_begin"/>
+                <setting name="CCPR1L" option="125"/>
+                <setting name="CCPR1H" option="0x0"/>
+                <additionalSetting name="ccpr" option="501"/>
+                <additionalSetting name="time" option="0.00000 ns"/>
+                <additionalSetting name="pwmperiod" option="16.0000 ms"/>
+                <additionalSetting name="duty" option="50"/>
+                <additionalSetting name="freq" option="62.5 Hz"/>
+                <additionalSetting name="timerselpresence" option="timerselabsent"/>
+                <additionalSetting name="resolution" option="9"/>
+                <additionalSetting name="singlesteering" option="steeringenabled"/>
+                <additionalSetting name="CTSEL" option="PWM1timer2"/>
+            </initializer>
+            <file checksum="1235047275" modified="false" name="epwm1.c" path="mcc_generated_files/epwm1.c"/>
+            <file checksum="3495083267" modified="false" name="epwm1.h" path="mcc_generated_files/epwm1.h"/>
+        </module>
+    </modules>
+</configuration>
